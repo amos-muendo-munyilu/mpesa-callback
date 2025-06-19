@@ -15,10 +15,11 @@ app.get('/', (req, res) => res.send('✅ M-PESA Callback Server Running'));
 
 // STK Callback Handler
 app.post('/mpesa-callback', async (req, res) => {
-    if (!isSafaricomRequest(req)) {
-        console.log("❌ Unauthorized request attempt");
-        return res.status(403).json({ message: "Forbidden" });
-    }
+   // if (!isSafaricomRequest(req)) {
+//   console.log("❌ Unauthorized request attempt");
+//   return res.status(403).json({ message: "Forbidden" });
+// }
+
 
     const callback = req.body?.Body?.stkCallback;
 
